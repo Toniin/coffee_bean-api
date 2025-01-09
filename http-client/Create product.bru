@@ -1,0 +1,29 @@
+meta {
+  name: Create product
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: admin
+  password: admin
+}
+
+body:json {
+  {
+    "image": "coffeeBeans-FullBodied.webp",
+    "name": "TEST",
+    "description": "desc test",
+    "price": 5.2,
+    "stock": 14,
+    "category": {
+      "id": 1
+    }
+  }
+}

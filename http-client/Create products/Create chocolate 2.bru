@@ -1,0 +1,25 @@
+meta {
+  name: Create chocolate 2
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "chocolate-le-cabaret.webp",
+    "name": "Chocolate 'Le Cabaret'",
+    "description": "Immerse yourself in the glamorous world of burlesque with Le Cabaret Organic Dark Chocolate 71% Cacao! This dark chocolate, intensely cocoa, makes you twirl between burlesque underskirts thanks to its unique recipe.",
+    "price": 6.95,
+    "stock": 19,
+    "category": {
+        "id": 3
+      }
+  }
+  
+}

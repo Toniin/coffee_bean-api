@@ -1,0 +1,25 @@
+meta {
+  name: Create tea 1
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "tea-White.webp",
+    "name": "White tea",
+    "description": "White tea offers a delicate harmony of flavors. Its subtle sweetness blends perfectly with the tangy freshness of bergamot.",
+    "price": 16.5,
+    "stock": 15,
+    "category": {
+        "id": 2
+      }
+  }
+  
+}

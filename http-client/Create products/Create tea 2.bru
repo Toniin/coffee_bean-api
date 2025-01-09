@@ -1,0 +1,25 @@
+meta {
+  name: Create tea 2
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "tea-Green.webp",
+    "name": "Green tea",
+    "description": "Minty Tea Green Tea is an exquisite blend that combines the vegetal and slightly bitter character of Gunpowder tea with the lively freshness of peppermint.",
+    "price": 5,
+    "stock": 27,
+    "category": {
+        "id": 2
+      }
+  }
+  
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Create chocolate 1
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "chocolate-marie-antoinette.webp",
+    "name": "Chocolate 'Marie Antoinette'",
+    "description": "Are you looking for a chocolate that combines flavor and crunch? Discover our ORGANIC Almond Milk Chocolate! This 41% milk chocolate bar is a real delight, filled with organic almond pieces.",
+    "price": 6.95,
+    "stock": 3,
+    "category": {
+        "id": 3
+      }
+  }
+  
+}

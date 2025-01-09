@@ -1,0 +1,25 @@
+meta {
+  name: Create coffee 2
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "coffeeBeans-Intenso.webp",
+    "name": "Coffee beans - Intenso espresso",
+    "description": "Coffee intenso is dark roasted to give a rich, powerful taste. Its aromas of dark cocoa, roasted hazelnuts and slight bitterness create an authentic experience.",
+    "price": 9.5,
+    "stock": 21,
+    "category": {
+        "id": 1
+      }
+  }
+  
+}

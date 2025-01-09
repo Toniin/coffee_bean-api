@@ -1,0 +1,25 @@
+meta {
+  name: Create coffee 1
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "coffeeBeans-FullBodied.webp",
+    "name": "Coffee beans - Full-bodied espresso",
+    "description": "Coffee full-bodied is a blend of Brazilian and African Arabicas, enhanced by the robustness of Robusta. Each cup offers a perfect balance of flavours, with chocolate notes from Brazil, fruity and floral aromas from Africa.",
+    "price": 5.2,
+    "stock": 14,
+    "category": {
+        "id": 1
+      }
+  }
+  
+}

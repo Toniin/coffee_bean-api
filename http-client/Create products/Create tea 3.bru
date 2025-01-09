@@ -1,0 +1,25 @@
+meta {
+  name: Create tea 3
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "tea-Black.webp",
+    "name": "Black tea",
+    "description": "Amaretti Almond Black Tea is an exquisite marriage of black teas flavored with almond and sprinkled with flower petals. Its soft and balanced taste offers a unique taste experience, reminiscent of the sweet delights of amaretti biscuits.",
+    "price": 5.5,
+    "stock": 11,
+    "category": {
+        "id": 2
+      }
+  }
+  
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Create coffee 3
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "image": "coffeeBeans-Mild.webp",
+    "name": "Coffe beans - Mild espresso",
+    "description": "Coffee mild is a subtle blend of the rich flavours of traditional Brazilian coffee and the intense aroma of traditional Ethiopian coffee.",
+    "price": 5.6,
+    "stock": 7,
+    "category": {
+        "id": 1
+      }
+  }
+  
+}
