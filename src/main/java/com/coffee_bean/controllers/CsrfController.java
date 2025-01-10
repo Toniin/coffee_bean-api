@@ -8,8 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CsrfController {
-    @PostMapping("/ressource")
+    @GetMapping("/ressource")
     public String ressource(HttpServletRequest request) {
+        CsrfToken csrfToken = (CsrfToken) request.getAttribute("_csrf");
+        return csrfToken.getToken();
+    }
+
+    @PostMapping("/ressource")
+    public String ressource() {
         return "ressource";
     }
 }

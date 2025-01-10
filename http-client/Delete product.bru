@@ -5,12 +5,11 @@ meta {
 }
 
 delete {
-  url: http://localhost:8080/api/product/165
+  url: http://localhost:8080/api/product/205
   body: none
-  auth: basic
+  auth: bearer
 }
 
-auth:basic {
-  username: admin
-  password: admin
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3MzY1MjAzMzEsImV4cCI6MTczNjUyMzkzMX0.iQLRMpM9IlDKP5eS3Tx9CK7MHQXmVgJu8CCyPxMKNXk
 }
