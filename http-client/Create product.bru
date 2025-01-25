@@ -1,23 +1,23 @@
 meta {
   name: Create product
   type: http
-  seq: 5
+  seq: 4
 }
 
 post {
-  url: http://localhost:8080/api/product
+  url: http://localhost:8080/api/products
   body: json
   auth: bearer
 }
 
 auth:bearer {
-  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3MzY1MjAyNjgsImV4cCI6MTczNjUyMzg2OH0.GYPVljQUzUkvACftHfCfRLjO_W18WBHaxqmhb_C34bQ
+  token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGVtYWlsLmNvbSIsImlhdCI6MTczNzQ3NDE2MCwiZXhwIjoxNzM3NDc3NzYwfQ.k8jG9g2n3LFN3aZ3Jam8f4NbtIzZ9MQHYgow-x8v-AM
 }
 
 body:json {
   {
     "image": "coffeeBeans-FullBodied.webp",
-    "name": "TEST",
+    "name": "TEST 2",
     "description": "desc test",
     "price": 5.2,
     "stock": 14,

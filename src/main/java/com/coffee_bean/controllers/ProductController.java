@@ -1,5 +1,6 @@
 package com.coffee_bean.controllers;
 
+//import com.coffee_bean.models.Product;
 import com.coffee_bean.models.Product;
 import com.coffee_bean.services.ProductServiceImp;
 import org.apache.coyote.BadRequestException;
@@ -8,13 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/api")
+@RequestMapping("/api/products")
 public class ProductController {
 
     @Autowired
     private ProductServiceImp productService;
 
-    @GetMapping("/products")
+    @GetMapping()
     public ResponseEntity<?> listAllProducts() {
         return ResponseEntity.ok(productService.getProducts());
     }
@@ -24,17 +25,17 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProductsByCategory(categoryId));
     }
 
-    @GetMapping("/product/{productId}")
+    @GetMapping("/{productId}")
     public ResponseEntity<?> getProductById(@PathVariable Long productId) {
         return ResponseEntity.ok(productService.getProductById(productId));
     }
 
-    @PostMapping("/product")
+    @PostMapping()
     public ResponseEntity<?> createProduct(@RequestBody Product product) throws BadRequestException {
         return ResponseEntity.ok(productService.saveProduct(product));
     }
 
-    @DeleteMapping("/product/{productId}")
+    @DeleteMapping("/{productId}")
     public ResponseEntity<?> deleteProduct(@PathVariable Long productId) {
         productService.deleteProduct(productId);
 

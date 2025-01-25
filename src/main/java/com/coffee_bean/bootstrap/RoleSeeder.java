@@ -4,7 +4,6 @@ import com.coffee_bean.models.Role;
 import com.coffee_bean.models.RoleEnum;
 import com.coffee_bean.repositories.RoleRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
